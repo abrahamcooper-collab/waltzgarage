@@ -32,9 +32,9 @@ export default function Footer() {
               <Image
                 src="/logo.jpg"
                 alt=""
-                width={64}
-                height={48}
-                className="h-12 w-auto rounded-md shrink-0"
+                width={107}
+                height={80}
+                className="h-20 w-auto rounded-md shrink-0"
               />
               <span
                 className="text-white font-bold"

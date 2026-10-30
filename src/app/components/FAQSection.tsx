@@ -30,6 +30,10 @@ const FAQS = [
     a: "We handle oil changes, general auto repair, exhaust, fabrication, stereo installs, performance modifications, and brakes. If you're not sure, just call — we've seen it all and we'll figure it out together.",
   },
   {
+    q: "Do you work on all makes and models?",
+    a: "Yes — Japanese, European, German, and domestic, old or new. If it has wheels and an engine, we can help.",
+  },
+  {
     q: "I'm not sure what service I need. What should I do?",
     a: "That's totally fine. Bring your vehicle in or give us a call and describe what's going on. We have 25 years of experience and we'll help you figure out the right next step.",
   },

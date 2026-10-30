@@ -70,10 +70,10 @@ export default function Navbar() {
           <Image
             src="/logo.jpg"
             alt=""
-            width={59}
-            height={44}
+            width={86}
+            height={64}
             priority
-            className="h-11 w-auto rounded-md shrink-0"
+            className="h-12 sm:h-16 w-auto rounded-md shrink-0"
           />
           <div className="flex flex-col leading-none">
             <span
