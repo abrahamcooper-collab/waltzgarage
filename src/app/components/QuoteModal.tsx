@@ -82,6 +82,15 @@ const SERVICES = [
     ),
   },
   {
+    id: "performance-forced-induction",
+    label: "Performance and forced induction",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3a9 9 0 1 0 9 9M12 12l5-5M12 3v2m9 7h-2" />
+      </svg>
+    ),
+  },
+  {
     id: "not-sure",
     label: "Not sure",
     icon: (
@@ -112,8 +121,8 @@ function Step1({
   onSelect: (id: string) => void;
   onNext: () => void;
 }) {
-  const mainServices = SERVICES.slice(0, 8);
-  const notSure = SERVICES[8];
+  const mainServices = SERVICES.filter((s) => s.id !== "not-sure");
+  const notSure = SERVICES.find((s) => s.id === "not-sure")!;
 
   return (
     <div>
@@ -204,7 +213,7 @@ function Step2({
         Tell us what&apos;s going on.
       </p>
       <p className="text-[#9B8060] mb-5" style={{ fontSize: "13px" }}>
-        Any details help — sounds, lights, how long it&apos;s been happening.
+        The more you tell us, the more we can help — sounds, lights, how long it&apos;s been happening.
       </p>
       <textarea
         className={inputClass}

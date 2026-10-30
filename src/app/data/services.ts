@@ -50,7 +50,7 @@ export const SERVICES: ServiceData[] = [
       },
       {
         q: "Do you work on all makes and models?",
-        a: "Yes — domestic, import, old or new. If it has wheels and an engine, we can help.",
+        a: "Yes — Japanese, European, German, and domestic, old or new. If it has wheels and an engine, we can help.",
       },
       {
         q: "Can I get a quote before you start work?",

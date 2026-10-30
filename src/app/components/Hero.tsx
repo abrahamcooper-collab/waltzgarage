@@ -59,7 +59,7 @@ export default function Hero() {
     >
       {/* Background image */}
       <Image
-        src="/hero.jpg"
+        src="/hero.png"
         alt="Waltz's Garage interior with cars on lifts"
         fill
         className="object-cover object-center"
