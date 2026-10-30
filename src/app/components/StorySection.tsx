@@ -7,7 +7,7 @@ export default function StorySection() {
   return (
     <section id="story" className="py-24 px-8 lg:px-20" style={{ background: "#EDE8DF" }}>
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-start gap-6">
+        <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-6">
           {/* Rotated side label + vertical line */}
           <div
             className="hidden lg:flex flex-col items-center shrink-0"
@@ -31,7 +31,7 @@ export default function StorySection() {
           </div>
 
           {/* Main content */}
-          <div className="flex-1 pl-4 lg:pl-6" style={{ maxWidth: "520px" }}>
+          <div className="flex-1 pl-0 lg:pl-6" style={{ maxWidth: "520px" }}>
             <p
               className="text-[#9B8060] uppercase mb-7"
               style={{ fontSize: "10px", letterSpacing: "0.28em" }}
@@ -81,12 +81,12 @@ export default function StorySection() {
           </div>
 
           {/* "25" stat */}
-          <div className="shrink-0 flex items-baseline gap-3 self-center ml-auto">
+          <div className="shrink-0 flex items-baseline gap-3 lg:self-center lg:ml-auto mt-6 lg:mt-0">
             <span
               className="font-bold text-[#7A1D2E] leading-none"
               style={{
                 fontFamily: "var(--font-playfair), Georgia, serif",
-                fontSize: "clamp(96px, 10vw, 148px)",
+                fontSize: "clamp(72px, 10vw, 148px)",
               }}
             >
               25

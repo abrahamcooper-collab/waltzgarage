@@ -41,9 +41,9 @@ export default function GallerySection() {
         </div>
 
         {/* Photo grid */}
-        <div className="flex flex-col lg:flex-row gap-3" style={{ height: "440px" }}>
+        <div className="flex flex-col lg:flex-row gap-3 lg:h-[440px]">
           {/* Large left image */}
-          <div className="relative flex-1 overflow-hidden" style={{ minWidth: 0 }}>
+          <div className="relative flex-1 overflow-hidden min-h-[250px] sm:min-h-[320px] lg:min-h-0" style={{ minWidth: 0 }}>
             <Image
               src={PHOTOS[0].src}
               alt={PHOTOS[0].caption}
@@ -70,9 +70,9 @@ export default function GallerySection() {
           </div>
 
           {/* Right column — two stacked images */}
-          <div className="flex flex-col gap-3 lg:w-[40%] shrink-0">
+          <div className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:w-[40%] shrink-0">
             {/* Top right */}
-            <div className="relative flex-1 overflow-hidden">
+            <div className="relative flex-1 overflow-hidden min-h-[200px] sm:min-h-[200px] lg:min-h-0">
               <Image
                 src={PHOTOS[1].src}
                 alt={PHOTOS[1].caption}
@@ -99,7 +99,7 @@ export default function GallerySection() {
             </div>
 
             {/* Bottom right */}
-            <div className="relative flex-1 overflow-hidden">
+            <div className="relative flex-1 overflow-hidden min-h-[200px] sm:min-h-[200px] lg:min-h-0">
               <Image
                 src={PHOTOS[2].src}
                 alt={PHOTOS[2].caption}

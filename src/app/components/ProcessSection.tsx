@@ -48,48 +48,55 @@ export default function ProcessSection() {
 
           {/* Right: 2×2 step grid */}
           <div className="flex-1">
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2">
               {STEPS.map((step, i) => {
                 const isLeft = i % 2 === 0;
                 const isTop = i < 2;
                 return (
                   <div
                     key={step.num}
-                    className="py-8"
+                    className="py-6 sm:py-8"
                     style={{
-                      paddingLeft: isLeft ? "0" : "40px",
-                      paddingRight: isLeft ? "40px" : "0",
-                      borderRight: isLeft ? "1px solid #C8BCAA" : "none",
-                      borderBottom: isTop ? "1px solid #C8BCAA" : "none",
+                      paddingLeft: isLeft ? "0" : "0",
+                      paddingRight: "0",
+                      borderBottom: "1px solid #C8BCAA",
                     }}
                   >
-                    {/* Step number + title row with dotted underline */}
                     <div
-                      className="flex items-center gap-2 pb-2 mb-3"
-                      style={{ borderBottom: "1px dotted #C8BCAA" }}
+                      className="sm:hidden-none"
+                      style={{
+                        paddingLeft: !isLeft ? "20px" : "0",
+                        paddingRight: isLeft ? "20px" : "0",
+                      }}
                     >
-                      <span
-                        className="text-[#9B8060] shrink-0"
-                        style={{ fontSize: "11px", letterSpacing: "0.1em" }}
+                      {/* Step number + title row with dotted underline */}
+                      <div
+                        className="flex items-center gap-2 pb-2 mb-3"
+                        style={{ borderBottom: "1px dotted #C8BCAA" }}
                       >
-                        {step.num}
-                      </span>
-                      <span className="text-[#9B8060]" style={{ fontSize: "10px" }}>
-                        •
-                      </span>
-                      <span
-                        className="font-bold text-[#2C1810]"
-                        style={{
-                          fontFamily: "var(--font-playfair), Georgia, serif",
-                          fontSize: "15px",
-                        }}
-                      >
-                        {step.title}
-                      </span>
+                        <span
+                          className="text-[#9B8060] shrink-0"
+                          style={{ fontSize: "11px", letterSpacing: "0.1em" }}
+                        >
+                          {step.num}
+                        </span>
+                        <span className="text-[#9B8060]" style={{ fontSize: "10px" }}>
+                          •
+                        </span>
+                        <span
+                          className="font-bold text-[#2C1810]"
+                          style={{
+                            fontFamily: "var(--font-playfair), Georgia, serif",
+                            fontSize: "15px",
+                          }}
+                        >
+                          {step.title}
+                        </span>
+                      </div>
+                      <p className="text-[#6B5540]" style={{ fontSize: "13px", lineHeight: "1.6" }}>
+                        {step.desc}
+                      </p>
                     </div>
-                    <p className="text-[#6B5540]" style={{ fontSize: "13px", lineHeight: "1.6" }}>
-                      {step.desc}
-                    </p>
                   </div>
                 );
               })}

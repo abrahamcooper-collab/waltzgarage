@@ -79,7 +79,7 @@ export default function Hero() {
       />
 
       {/* Content wrapper */}
-      <div className="relative z-10 h-full flex flex-col px-16">
+      <div className="relative z-10 h-full flex flex-col px-6 sm:px-10 lg:px-16">
         {/* Top sub-label — sits below the navbar */}
         <div className="mt-28 flex items-center gap-3">
           <span className="block w-8 h-px bg-white/55" />
@@ -159,10 +159,10 @@ export default function Hero() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex items-end justify-between pb-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 pb-6">
           {/* Left: scroll + years */}
-          <div className="flex items-center gap-10">
-            <div className="flex items-center gap-2 text-white/40 text-[10px] tracking-[0.22em] uppercase">
+          <div className="flex items-center gap-6 sm:gap-10 flex-wrap">
+            <div className="hidden sm:flex items-center gap-2 text-white/40 text-[10px] tracking-[0.22em] uppercase">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -192,8 +192,10 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: circular badge */}
-          <CircularBadge />
+          {/* Right: circular badge — hidden on small screens */}
+          <div className="hidden md:block">
+            <CircularBadge />
+          </div>
         </div>
       </div>
     </section>
