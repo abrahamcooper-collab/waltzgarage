@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen overflow-hidden"
+      className="relative w-full min-h-screen overflow-hidden"
       aria-label="Hero section"
     >
       {/* Background image */}
@@ -78,7 +78,7 @@ export default function Hero() {
       />
 
       {/* Content wrapper */}
-      <div className="relative z-10 h-full flex flex-col px-5 sm:px-8 lg:px-20">
+      <div className="relative z-10 min-h-screen flex flex-col px-5 sm:px-8 lg:px-20 pt-32 sm:pt-36 pb-16">
 
         {/* Main text block — vertically centered */}
         <div className="flex-1 flex flex-col justify-center max-w-xl">
@@ -87,7 +87,7 @@ export default function Hero() {
             className="font-bold text-white leading-none"
             style={{
               fontFamily: "var(--font-playfair), Georgia, serif",
-              fontSize: "clamp(56px, 7vw, 100px)",
+              fontSize: "clamp(44px, 6.5vw, 92px)",
             }}
           >
             Good work.
@@ -96,7 +96,7 @@ export default function Hero() {
             className="font-bold italic text-copper leading-tight mt-1"
             style={{
               fontFamily: "var(--font-playfair), Georgia, serif",
-              fontSize: "clamp(56px, 7vw, 100px)",
+              fontSize: "clamp(44px, 6.5vw, 92px)",
             }}
           >
             Kept close to<br />home.
