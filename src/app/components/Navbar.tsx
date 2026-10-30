@@ -68,7 +68,7 @@ export default function Navbar() {
           aria-label="Waltz's Garage — Home"
         >
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt=""
             width={86}
             height={64}

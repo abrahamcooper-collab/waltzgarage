@@ -30,7 +30,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center gap-3 mb-5 group" aria-label="Waltz's Garage Home">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt=""
                 width={107}
                 height={80}

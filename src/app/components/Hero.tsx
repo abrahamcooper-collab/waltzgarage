@@ -79,13 +79,6 @@ export default function Hero() {
 
       {/* Content wrapper */}
       <div className="relative z-10 h-full flex flex-col px-5 sm:px-8 lg:px-20">
-        {/* Top sub-label — sits below the navbar */}
-        <div className="mt-28 flex items-center gap-3">
-          <span className="block w-8 h-px bg-white/55" />
-          <span className="text-[10px] tracking-[0.28em] uppercase text-white/55 font-sans">
-            Kendallville, Indiana &nbsp;·&nbsp; Est. In Experience
-          </span>
-        </div>
 
         {/* Main text block — vertically centered */}
         <div className="flex-1 flex flex-col justify-center max-w-xl">
@@ -110,8 +103,8 @@ export default function Hero() {
           </h2>
 
           {/* Body copy */}
-          <p className="text-white/75 text-[15px] leading-relaxed mt-7 max-w-[320px]">
-            For 25 years,{" "}
+          <p className="text-white/75 text-[15px] leading-relaxed mt-7 max-w-[440px]">
+            At{" "}
             <Link
               href={MAPS_URL}
               target="_blank"
@@ -119,9 +112,12 @@ export default function Hero() {
               className="underline underline-offset-2 hover:text-white transition-colors"
             >
               Waltz&apos;s Garage
-            </Link>{" "}
-            has been helping drivers in Kendallville take care of the vehicles
-            they depend on.
+            </Link>
+            , we&apos;re proud to serve Kendallville and the surrounding
+            communities with honest, integrity-driven automotive care. From
+            routine maintenance to complex diagnostics, repairs, and custom work,
+            we&apos;re committed to quality craftsmanship, fair pricing, and
+            earning your trust with every vehicle that comes through our doors.
           </p>
 
           {/* CTA row */}
