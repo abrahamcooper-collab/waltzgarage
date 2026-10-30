@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useQuote } from "@/app/context/QuoteContext";
 
 const NAV_LINKS = [
@@ -50,22 +51,14 @@ export default function Navbar() {
           className="flex items-center gap-3 group"
           aria-label="Waltz's Garage — Home"
         >
-          <div
-            className={`w-11 h-11 rounded-full border flex items-center justify-center shrink-0 transition-colors duration-300 ${
-              scrolled
-                ? "border-[#7A1D2E]/40 bg-[#7A1D2E]/10"
-                : "border-white/50 bg-[#2a0f14]/60"
-            }`}
-          >
-            <span
-              className={`font-bold text-lg leading-none transition-colors duration-300 ${
-                scrolled ? "text-[#7A1D2E]" : "text-white"
-              }`}
-              style={{ fontFamily: "var(--font-playfair), serif" }}
-            >
-              W
-            </span>
-          </div>
+          <Image
+            src="/logo.jpg"
+            alt=""
+            width={59}
+            height={44}
+            priority
+            className="h-11 w-auto rounded-md shrink-0"
+          />
           <div className="flex flex-col leading-none">
             <span
               className={`font-bold text-[15px] tracking-wide transition-colors duration-300 ${

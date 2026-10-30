@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useQuote } from "@/app/context/QuoteContext";
 import BusinessName, { MAPS_URL } from "@/app/components/BusinessName";
 
@@ -28,17 +29,13 @@ export default function Footer() {
           {/* Col 1: Brand */}
           <div>
             <Link href="/" className="inline-flex items-center gap-3 mb-5 group" aria-label="Waltz's Garage Home">
-              <div
-                className="w-12 h-12 rounded-full border flex items-center justify-center shrink-0"
-                style={{ borderColor: "rgba(122,29,46,0.5)", background: "rgba(122,29,46,0.15)" }}
-              >
-                <span
-                  className="font-bold text-xl text-white leading-none"
-                  style={{ fontFamily: "var(--font-playfair), serif" }}
-                >
-                  W
-                </span>
-              </div>
+              <Image
+                src="/logo.jpg"
+                alt=""
+                width={64}
+                height={48}
+                className="h-12 w-auto rounded-md shrink-0"
+              />
               <span
                 className="text-white font-bold"
                 style={{
