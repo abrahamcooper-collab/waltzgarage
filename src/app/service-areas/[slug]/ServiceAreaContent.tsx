@@ -4,9 +4,8 @@ import Link from "next/link";
 import { useQuote } from "@/app/context/QuoteContext";
 import { SERVICES, SERVICE_AREAS } from "@/app/data/services";
 import type { ServiceAreaData } from "@/app/data/services";
+import BusinessName, { MAPS_URL, withBusinessLinks } from "@/app/components/BusinessName";
 
-const MAPS_URL =
-  "https://www.google.com/maps/place/Waltz's+Garage/@41.4511459,-85.2689499,17z/data=!3m1!4b1!4m6!3m5!1s0x8816153463d78597:0x87d9051ad7e36787!8m2!3d41.4511459!4d-85.2689499!16s%2Fg%2F11p1g36sz_?hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D";
 
 export default function ServiceAreaContent({
   area,
@@ -194,7 +193,7 @@ export default function ServiceAreaContent({
                     fontSize: "16px",
                   }}
                 >
-                  Waltz&apos;s Garage
+                  <BusinessName className="hover:text-[#7A1D2E] transition-colors" />
                 </h3>
                 <div className="space-y-2">
                   <p
@@ -227,7 +226,7 @@ export default function ServiceAreaContent({
                 className="text-[#4A3728] leading-relaxed mb-8"
                 style={{ fontSize: "15px", lineHeight: "1.8" }}
               >
-                {area.description}
+                {withBusinessLinks(area.description)}
               </p>
 
               {/* Embedded map */}
@@ -236,7 +235,7 @@ export default function ServiceAreaContent({
                 style={{ aspectRatio: "16/9", border: "1px solid #C8BCAA" }}
               >
                 <iframe
-                  src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&origin=${area.mapQuery.split('+to+')[0]}&destination=Waltz's+Garage,+701+Krueger+St,+Kendallville,+IN+46755&mode=driving`}
+                  src={`https://maps.google.com/maps?saddr=${area.mapQuery.split('+to+')[0]}&daddr=701+Krueger+St,+Kendallville,+IN+46755&output=embed`}
                   width="100%"
                   height="100%"
                   style={{ border: 0, position: "absolute", inset: 0 }}
@@ -283,7 +282,7 @@ export default function ServiceAreaContent({
             className="text-white/45 max-w-lg leading-relaxed mb-12"
             style={{ fontSize: "14px", lineHeight: "1.7" }}
           >
-            {area.city} drivers can count on Waltz&apos;s Garage for the full
+            {area.city} drivers can count on <BusinessName /> for the full
             range of automotive services. Here&apos;s what we offer:
           </p>
 

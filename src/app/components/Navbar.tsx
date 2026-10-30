@@ -5,11 +5,11 @@ import Link from "next/link";
 import { useQuote } from "@/app/context/QuoteContext";
 
 const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Our story", href: "#story" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Faq", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Our story", href: "/#story" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Faq", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {

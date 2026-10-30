@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { SERVICE_AREAS } from "@/app/data/services";
+import BusinessName, { MAPS_URL } from "@/app/components/BusinessName";
 
-const MAPS_URL =
-  "https://www.google.com/maps/place/Waltz's+Garage/@41.4511459,-85.2689499,17z/data=!3m1!4b1!4m6!3m5!1s0x8816153463d78597:0x87d9051ad7e36787!8m2!3d41.4511459!4d-85.2689499!16s%2Fg%2F11p1g36sz_?hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D";
 
 export default function LocationSection() {
   return (
@@ -135,7 +134,7 @@ export default function LocationSection() {
               className="text-[#4A3728] leading-relaxed mb-7"
               style={{ fontSize: "14px", maxWidth: "380px" }}
             >
-              Waltz&apos;s Garage welcomes drivers from nearby communities across
+              <BusinessName /> welcomes drivers from nearby communities across
               northeast Indiana. If you are around the 50-mile mark, give us a
               call and we will help you find the right next step.
             </p>

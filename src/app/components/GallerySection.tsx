@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BusinessName from "@/app/components/BusinessName";
 
 const PHOTOS = [
   { src: "/images/general/IMG_7115.jpeg", caption: "Hands-on expertise",  num: "01", position: "object-center" },
@@ -36,7 +37,7 @@ export default function GallerySection() {
             style={{ fontSize: "14px" }}
           >
             A look at the people, vehicles, and hands-on work that make up a day
-            at Waltz&apos;s Garage.
+            at <BusinessName />.
           </p>
         </div>
 

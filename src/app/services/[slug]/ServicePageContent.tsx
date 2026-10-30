@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useQuote } from "@/app/context/QuoteContext";
 import { SERVICES } from "@/app/data/services";
 import type { ServiceData } from "@/app/data/services";
+import { withBusinessLinks } from "@/app/components/BusinessName";
 
 export default function ServicePageContent({
   service,
@@ -138,13 +139,13 @@ export default function ServicePageContent({
                 className="text-[#4A3728] leading-relaxed mb-8"
                 style={{ fontSize: "15px", lineHeight: "1.8" }}
               >
-                {service.longDescription}
+                {withBusinessLinks(service.longDescription)}
               </p>
               <p
                 className="text-[#4A3728] leading-relaxed"
                 style={{ fontSize: "15px", lineHeight: "1.8" }}
               >
-                {service.description}
+                {withBusinessLinks(service.description)}
               </p>
             </div>
           </div>

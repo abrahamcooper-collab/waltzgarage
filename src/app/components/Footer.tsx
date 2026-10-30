@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { useQuote } from "@/app/context/QuoteContext";
+import BusinessName, { MAPS_URL } from "@/app/components/BusinessName";
 
-const MAPS_URL =
-  "https://www.google.com/maps/place/Waltz's+Garage/@41.4511459,-85.2689499,17z/data=!3m1!4b1!4m6!3m5!1s0x8816153463d78597:0x87d9051ad7e36787!8m2!3d41.4511459!4d-85.2689499!16s%2Fg%2F11p1g36sz_?hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D";
 
 export default function Footer() {
   const { openModal } = useQuote();
@@ -16,7 +15,7 @@ export default function Footer() {
         {/* ── Top label row ── */}
         <div className="flex justify-between items-center pt-10 pb-8" style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
           <span className="text-white/30 uppercase" style={{ fontSize: "9px", letterSpacing: "0.28em" }}>
-            WALTZ&apos;S GARAGE
+            <BusinessName className="hover:text-white/60 transition-colors">WALTZ&apos;S GARAGE</BusinessName>
           </span>
           <span className="text-white/30 uppercase" style={{ fontSize: "9px", letterSpacing: "0.28em" }}>
             KENDALLVILLE, INDIANA
@@ -59,7 +58,7 @@ export default function Footer() {
               A local garage with 25 years in the automotive industry.
             </p>
             <Link
-              href="#contact"
+              href="/#contact"
               className="text-[#C4845A] hover:text-[#D9A07A] transition-colors inline-flex items-center gap-1"
               style={{ fontSize: "13px", borderBottom: "1px solid rgba(196,132,90,0.4)", paddingBottom: "2px" }}
             >
