@@ -4,7 +4,7 @@ import { MAPS_URL } from "@/app/components/BusinessName";
 
 export default function StorySection() {
   return (
-    <section id="story" className="py-24 px-8 lg:px-20" style={{ background: "#EDE8DF" }}>
+    <section id="story" className="py-20 lg:py-28 px-5 sm:px-8 lg:px-20" style={{ background: "#EDE8DF" }}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-6">
           {/* Rotated side label + vertical line */}

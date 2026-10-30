@@ -4,9 +4,25 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useQuote } from "@/app/context/QuoteContext";
+import { SERVICES, SERVICE_AREAS } from "@/app/data/services";
+
+const DROPDOWNS = [
+  {
+    label: "Services",
+    href: "/#services",
+    items: SERVICES.map((s) => ({ label: s.name, href: `/services/${s.slug}` })),
+  },
+  {
+    label: "Service areas",
+    href: "/#contact",
+    items: SERVICE_AREAS.map((a) => ({
+      label: `${a.city}, ${a.state}`,
+      href: `/service-areas/${a.slug}`,
+    })),
+  },
+];
 
 const NAV_LINKS = [
-  { label: "Services", href: "/#services" },
   { label: "Our story", href: "/#story" },
   { label: "Gallery", href: "/#gallery" },
   { label: "Faq", href: "/#faq" },
@@ -41,7 +57,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 sm:px-8 py-4 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 sm:px-8 lg:px-20 py-4 transition-all duration-300 ${
           scrolled ? "bg-[#EDE8DF] shadow-sm" : "bg-transparent"
         }`}
       >
@@ -78,7 +94,35 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav links */}
-        <div className="hidden lg:flex items-center gap-7">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-7">
+          {DROPDOWNS.map((menu) => (
+            <div key={menu.label} className="relative group">
+              <Link
+                href={menu.href}
+                className={`text-sm flex items-center gap-1 transition-colors duration-200 ${textClass}`}
+                aria-haspopup="true"
+              >
+                {menu.label}
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" aria-hidden="true">
+                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" />
+                </svg>
+              </Link>
+              <div className="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-200">
+                <ul className="min-w-[220px] bg-[#180A0D] py-2 shadow-xl" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
+                  {menu.items.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className="block px-5 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -164,7 +208,37 @@ export default function Navbar() {
         }`}
         style={{ background: "#180A0D", paddingTop: "72px" }}
       >
-        <div className="flex flex-col px-6 py-6 gap-1">
+        <div className="flex flex-col px-5 sm:px-8 py-6 gap-1 max-h-[calc(100dvh-72px)] overflow-y-auto">
+          {DROPDOWNS.map((menu) => (
+            <details
+              key={menu.label}
+              className="group"
+              style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
+            >
+              <summary
+                className="text-white/80 hover:text-white py-3 text-lg flex items-center justify-between cursor-pointer list-none [&::-webkit-details-marker]:hidden"
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+              >
+                {menu.label}
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 transition-transform group-open:rotate-180" aria-hidden="true">
+                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" />
+                </svg>
+              </summary>
+              <ul className="pb-3 pl-4 space-y-1">
+                {menu.items.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block py-1.5 text-[15px] text-white/60 hover:text-white transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

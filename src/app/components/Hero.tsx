@@ -78,7 +78,7 @@ export default function Hero() {
       />
 
       {/* Content wrapper */}
-      <div className="relative z-10 h-full flex flex-col px-6 sm:px-10 lg:px-16">
+      <div className="relative z-10 h-full flex flex-col px-5 sm:px-8 lg:px-20">
         {/* Top sub-label — sits below the navbar */}
         <div className="mt-28 flex items-center gap-3">
           <span className="block w-8 h-px bg-white/55" />

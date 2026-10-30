@@ -105,7 +105,7 @@ export default function ServicesSection() {
   return (
     <section id="services" style={{ background: "#EDE8DF" }}>
       {/* ── Header ── */}
-      <div className="max-w-7xl mx-auto px-8 lg:px-20 pt-24 pb-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-20 pt-20 lg:pt-28 pb-12">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div>
             <p
@@ -137,7 +137,7 @@ export default function ServicesSection() {
       </div>
 
       {/* ── Service list + image panel ── */}
-      <div className="max-w-7xl mx-auto px-8 lg:px-20 pb-0">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-20 pb-0">
         <div className="flex flex-col lg:flex-row gap-0">
           {/* Service list */}
           <div className="lg:w-[46%] shrink-0">
@@ -244,7 +244,7 @@ export default function ServicesSection() {
         className="mt-16 mx-8 lg:mx-20 mb-0 rounded-none"
         style={{ background: "#6B1726" }}
       >
-        <div className="max-w-7xl mx-auto px-8 lg:px-16 py-12 flex flex-col lg:flex-row gap-12">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-20 py-12 flex flex-col lg:flex-row gap-12">
           {/* Left: heading */}
           <div className="lg:w-[36%] shrink-0">
             <div className="flex items-center gap-3 mb-5">

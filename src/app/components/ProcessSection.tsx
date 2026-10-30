@@ -23,7 +23,7 @@ const STEPS = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-24 px-8 lg:px-20" style={{ background: "#EDE8DF" }}>
+    <section className="py-20 lg:py-28 px-5 sm:px-8 lg:px-20" style={{ background: "#EDE8DF" }}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           {/* Left: label + heading */}

@@ -7,7 +7,7 @@ export default function CTABanner() {
   const { openModal } = useQuote();
 
   return (
-    <section id="book" className="py-20 px-8 lg:px-20" style={{ background: "#6B1726" }}>
+    <section id="book" className="py-20 px-5 sm:px-8 lg:px-20" style={{ background: "#6B1726" }}>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left: heading */}
         <div>

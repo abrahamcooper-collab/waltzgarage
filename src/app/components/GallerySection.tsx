@@ -9,7 +9,7 @@ const PHOTOS = [
 
 export default function GallerySection() {
   return (
-    <section id="gallery" className="py-24 px-8 lg:px-20" style={{ background: "#EDE8DF" }}>
+    <section id="gallery" className="py-20 lg:py-28 px-5 sm:px-8 lg:px-20" style={{ background: "#EDE8DF" }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">

@@ -45,7 +45,7 @@ export default function ServiceAreaContent({
         />
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-8 lg:px-20 pb-16 pt-40">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-8 lg:px-20 pb-16 pt-40">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-6">
             <Link
@@ -154,7 +154,7 @@ export default function ServiceAreaContent({
           ABOUT THIS AREA
       ════════════════════════════════════════════════════════════════ */}
       <section style={{ background: "#EDE8DF" }} className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-8 lg:px-20">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-20">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
             {/* Left */}
             <div className="lg:w-[40%] shrink-0">
@@ -260,7 +260,7 @@ export default function ServiceAreaContent({
           SERVICES WE OFFER
       ════════════════════════════════════════════════════════════════ */}
       <section style={{ background: "#180A0D" }} className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-8 lg:px-20">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-20">
           <p
             className="text-[#9B8060] uppercase mb-5"
             style={{ fontSize: "10px", letterSpacing: "0.28em" }}
@@ -332,7 +332,7 @@ export default function ServiceAreaContent({
           OTHER SERVICE AREAS
       ════════════════════════════════════════════════════════════════ */}
       <section style={{ background: "#EDE8DF" }} className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-8 lg:px-20">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-20">
           <p
             className="text-[#9B8060] uppercase mb-5"
             style={{ fontSize: "10px", letterSpacing: "0.28em" }}
@@ -383,7 +383,7 @@ export default function ServiceAreaContent({
           CTA BANNER
       ════════════════════════════════════════════════════════════════ */}
       <section
-        className="py-20 px-8 lg:px-20"
+        className="py-20 px-5 sm:px-8 lg:px-20"
         style={{ background: "#6B1726" }}
       >
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">

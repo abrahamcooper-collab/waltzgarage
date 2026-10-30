@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer style={{ background: "#180A0D", color: "#fff" }}>
-      <div className="max-w-7xl mx-auto px-8 lg:px-20">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-20">
 
         {/* ── Top label row ── */}
         <div className="flex justify-between items-center pt-10 pb-8" style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
